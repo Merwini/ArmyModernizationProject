@@ -1,0 +1,69 @@
+FactionDef base
+FactionDef friendly
+FactionDef hostile
+
+CultureDef base
+CultureDef friendly
+CultureDef hostile
+
+TraderKindDefs
+
+NameBanks
+RulePacks
+
+Weapon tag patches
+
+Drone race ThingDefs
+	RC car
+	Gun dog
+	Heavy drone
+	Unique boss drones?
+
+Humanlike PawnKinds
+	Drone operator
+	Light infantry
+	Heavy infantry
+	Flame infantry
+	Officer
+	Paratrooper
+	Medic
+	Grenadier
+	Anti-armor infantry
+
+Mechanical PawnKinds
+	RC bomb car
+	RC flame car
+	LMG gun dog
+	Flame gun dog
+	MG heavy drone
+	Flame heavy drone
+	Missile heavy drone
+	C-RAM drone
+
+PawnGroupMakers
+	RC strike
+		1+ operators, RC drones
+	Light infantry attack
+		light infantry, gun dogs
+	Heavy infantry attack
+		heavy infantry, heavy drones
+	Paratroopers
+		center drop raid, flashbangs / close-quarters weapons
+	Flame raid
+		flame infantry, flame gun dogs and/or flame heavy drones
+
+World map tiles that enable new incidents and/or pawnKinds
+	Artillery camp
+		Sends a heavily-entrenched spotter squad to your map. Until destroyed, periodically shells your defenses and sends light raid reinforcements
+	Chemical Warfare
+		Siege that targets your crops with shells that lower soil fertility. Requires some sort of soil remediation to correct. Or maybe just causes blight
+	Biological Warfare
+		Hits your colony with a disease shortly before the raid
+	Paratrooper Training Camp
+		Enables center drop paratrooper raids
+	Propaganda Station
+		periodically lowers other factions' opinion of you
+	Drone Factory
+		more/stronger drones. Maybe specialized drone factories for more advanced models
+	Drug Den
+		(unhappy?) colonists have a chance to randomly become addicted to drugs
