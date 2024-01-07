@@ -6,4 +6,11 @@
 			<li>AMP_LMG</li>
 		</value>
 	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="CE_DisposableRocketLauncher"]/weaponTags</xpath>
+		<value>
+			<li>AMP_LAW</li>
+		</value>
+	</Operation>
 </Patch>
