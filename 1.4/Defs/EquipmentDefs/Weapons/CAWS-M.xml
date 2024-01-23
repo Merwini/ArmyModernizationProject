@@ -41,7 +41,7 @@
         <recoilAmount>2.84</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+        <defaultProjectile>Bullet_12GaugeBelted_TungstenBuck</defaultProjectile>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <warmupTime>0.6</warmupTime>
@@ -55,7 +55,7 @@
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>15</magazineSize>
         <reloadTime>4.5</reloadTime>
-        <ammoSet>AmmoSet_12Gauge</ammoSet>
+        <ammoSet>AmmoSet_12GaugeBelted</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
         <aiUseBurstMode>TRUE</aiUseBurstMode>
