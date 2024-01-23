@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ==================== Incendiary grenade ========================== -->
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>amp_Proj_SatchelCharge</defName>
+		<label>satchel charge</label>
+		<graphicData>
+			<texPath>Modernization/Weapons/PROJECTILE/Satchel_projectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<explosionRadius>3.9</explosionRadius>
+			<damageDef>Bomb</damageDef>
+			<damageAmountBase>290</damageAmountBase>
+			<explosionDelay>200</explosionDelay>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<speed>12</speed>
+			<screenShakeFactor>1</screenShakeFactor>
+			<suppressionFactor>5.0</suppressionFactor>
+			<dangerFactor>4.0</dangerFactor>
+			<airborneSuppressionFactor>0.25</airborneSuppressionFactor>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>6</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+		<defName>amp_SatchelCharge</defName>
+		<equipmentType>Primary</equipmentType>
+		<label>satchel charge</label>
+		<description>A demolition charge for breaching and sabotage.</description>
+		<graphicData>
+			<texPath>Modernization/Weapons/Satchel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<Mass>2.7</Mass>
+			<Bulk>3.6</Bulk>
+			<MarketValue>55</MarketValue>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+		</statBases>
+		<generateCommonality>0.3</generateCommonality>
+		<weaponTags>
+			<li>CE_AI_Grenade</li>
+			<li>CE_AI_AOE</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>AMP_Grenade</li>
+			<li>AMP_Demolition</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<label>throw satchel charge</label>
+				<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>9</range>
+				<minRange>2.9</minRange>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>10</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>amp_Proj_SatchelCharge</defaultProjectile>
+				<onlyManualCast>true</onlyManualCast>
+				<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+			</li>
+		</verbs>
+		<detonateProjectile>amp_Proj_SatchelCharge</detonateProjectile>
+	</ThingDef>
+	
+	
+	<RecipeDef ParentName="GrenadeRecipeBase">
+		<defName>MakeSatchelCharge</defName>
+		<label>make satchel charge x10</label>
+		<description>Craft 10 satchel charge.</description>
+		<jobString>Making satchel charge.</jobString>
+		<researchPrerequisite>Machining</researchPrerequisite>
+		<workAmount>9000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+				<li>Prometheum</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<amp_SatchelCharge>5</amp_SatchelCharge>
+		</products>
+	</RecipeDef>
+
+</Defs>
