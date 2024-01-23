@@ -31,6 +31,7 @@
     </statBases>
     <weaponTags>
       <li>GunHeavy</li>
+			<li>AMP_LAW</li>
     </weaponTags>
     <thingCategories>
       <li>WeaponsRanged</li>

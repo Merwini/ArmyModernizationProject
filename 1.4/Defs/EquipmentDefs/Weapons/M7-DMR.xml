@@ -27,10 +27,9 @@
 			<Chemfuel>5</Chemfuel>
 		</costList>
 		<weaponTags>
-      <li>SniperRifle</li>
       <li>CE_AI_SR</li>
-			<li>IndustrialGunAdvanced</li>
       <li>Bipod_DMR</li>
+			<li>AMP_DMR</li>
 		</weaponTags>
 		<verbs>
 			<li Class="CombatExtended.VerbPropertiesCE">

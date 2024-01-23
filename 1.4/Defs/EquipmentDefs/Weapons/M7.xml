@@ -28,7 +28,7 @@
 		</costList>
 		<weaponTags>
 			<li>CE_AI_AR</li>
-			<li>IndustrialGunAdvanced</li>
+			<li>AMP_BR</li>
 		</weaponTags>
 		<verbs>
 			<li Class="CombatExtended.VerbPropertiesCE">

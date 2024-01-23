@@ -45,8 +45,8 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<weaponTags>
-			<li>IndustrialGunAdvanced</li>
 			<li>CE_AI_AR</li>
+			<li>AMP_PDW</li>
 		</weaponTags>
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
