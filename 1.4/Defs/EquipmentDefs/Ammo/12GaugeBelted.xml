@@ -14,7 +14,7 @@
 		<defName>AmmoSet_12GaugeBelted</defName>
 		<label>12 Gauge Belted</label>
 		<ammoTypes>
-			<Ammo_12GaugeBleted_TungstenBuck>Bullet_12GaugeBelted_TungstenBuck</Ammo_12GaugeBleted_TungstenBuck>
+			<Ammo_12GaugeBelted_TungstenBuck>Bullet_12GaugeBelted_TungstenBuck</Ammo_12GaugeBelted_TungstenBuck>
 			<Ammo_12GaugeBelted_Flechette>Bullet_12GaugeBelted_Flechette</Ammo_12GaugeBelted_Flechette>
 			<Ammo_12GaugeBelted_Sabot>Bullet_12GaugeBelted_Sabot</Ammo_12GaugeBelted_Sabot>
 			<Ammo_12Gauge_ElectroSlug>Bullet_12GaugeBelted_ElectroSlug</Ammo_12Gauge_ElectroSlug>
@@ -42,7 +42,7 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12GaugeBase">
-		<defName>Ammo_12GaugeBleted_TungstenBuck</defName>
+		<defName>Ammo_12GaugeBelted_TungstenBuck</defName>
 		<label>12 gauge belted (Tungsten Buck)</label>
 		<graphicData>
 			<texPath>Modernization/Weapons/12gaBelted/TungstenBuck</texPath>
@@ -201,7 +201,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_12GaugeBleted_TungstenBuck>200</Ammo_12GaugeBleted_TungstenBuck>
+			<Ammo_12GaugeBelted_TungstenBuck>200</Ammo_12GaugeBelted_TungstenBuck>
 		</products>
 		<workAmount>2500</workAmount>
 	</RecipeDef>

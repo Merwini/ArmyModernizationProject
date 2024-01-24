@@ -138,7 +138,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Weapon_GrenadeIncendiary>10</Weapon_GrenadeIncendiary>
+			<amp_GrenadeIncendiary>10</amp_GrenadeIncendiary>
 		</products>
 	</RecipeDef>
 

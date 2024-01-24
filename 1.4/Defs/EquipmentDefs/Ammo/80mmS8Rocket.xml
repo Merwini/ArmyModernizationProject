@@ -52,7 +52,7 @@
 		<defName>Ammo_80mmRocket_HE</defName>
 		<label>80mm rocket (HE)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rocket/80mmS5/HE</texPath>
+			<texPath>Things/Ammo/Rocket/57mmS5/HE</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -68,7 +68,7 @@
 		<defName>Ammo_80mmRocket_HEAT</defName>
 		<label>80mm rocket (HEAT)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rocket/80mmS5/HEAT</texPath>
+			<texPath>Things/Ammo/Rocket/57mmS5/HEAT</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
@@ -84,7 +84,7 @@
 		<defName>Ammo_80mmRocket_Thermobaric</defName>
 		<label>80mm rocket (Thermobaric)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Rocket/80mmS5/Thermobaric</texPath>
+			<texPath>Things/Ammo/Rocket/57mmS5/Thermobaric</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
