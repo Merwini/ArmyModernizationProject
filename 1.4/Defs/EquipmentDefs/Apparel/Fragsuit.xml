@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>amp_Fragsuit</defName>
+    <label>fragmentation overall</label>
+    <description>Thick overall with fragmentation rated armor sewn into the plates not covered by the infantryman's plate carrier. Includes gloves and boots.</description>
+    <graphicData>
+      <texPath>Modernization/Apparel/Digi-FragSuit/Digi-FragSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <costList>
+      <DevilstrandCloth>50</DevilstrandCloth>
+      <Cloth>50</Cloth>
+      <Chemfuel>20</Chemfuel>
+    </costList>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Bulk>7</Bulk>
+      <WornBulk>3</WornBulk>
+      <Mass>4.2</Mass>
+      <Flammability>0.6</Flammability>
+      <ArmorRating_Sharp>3</ArmorRating_Sharp>
+      <ArmorRating_Blunt>3</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <StuffEffectMultiplierInsulation_Cold>1.0</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.0</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Modernization/Apparel/Digi-FragSuit/Digi-FragSuit</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>amp_MediumArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.PartialArmorExt">
+         <stats>
+           <li>
+            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+            <parts>
+              <li>Torso</li>
+            </parts>
+          </li>
+           <li>
+            <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+            <parts>
+              <li>Torso</li>
+            </parts>
+          </li>
+           <li>
+            <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+            <parts>
+              <li>Hand</li>
+            </parts>
+          </li>
+           <li>
+            <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+            <parts>
+              <li>Hand</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+            <parts>
+              <li>Foot</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+            <parts>
+              <li>Foot</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>

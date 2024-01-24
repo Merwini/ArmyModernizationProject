@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ==================== Plate carrier ==================== -->
+
+   <ThingDef ParentName="ArmorMachineableBase">
+    <defName>amp_ArmorVest</defName>
+    <label>armor vest (digital camo)</label>
+    <description>Improved plate carrier with lightened construction and minor protection improvement.</description>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Modernization/Apparel/Digi-Vest/Digi-Vest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MaxHitPoints>100</MaxHitPoints>
+      <ArmorRating_Sharp>14.5</ArmorRating_Sharp>
+      <ArmorRating_Blunt>23</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.35</ArmorRating_Heat>
+      <Mass>8</Mass>
+      <Bulk>5</Bulk>
+      <WornBulk>3</WornBulk>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <costList>
+      <Steel>50</Steel>
+      <DevilstrandCloth>30</DevilstrandCloth>
+      <Cloth>25</Cloth>
+    </costList>
+    <equippedStatOffsets>
+      <CarryBulk>25</CarryBulk>
+      <ReloadSpeed>0.1</ReloadSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Modernization/Apparel/Digi-Vest/Digi-Vest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Webbing</li>
+      </layers>
+      <tags>
+        <li>amp_MediumArmor</li>
+        <li>amp_LightAromr</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.PartialArmorExt">
+         <stats>
+           <li>
+            <ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+            <parts>
+              <li>Neck</li>
+            </parts>
+          </li>
+           <li>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <parts>
+              <li>Neck</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+            <parts>
+              <li>Shoulder</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+            <parts>
+              <li>Shoulder</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+</Defs>
