@@ -80,14 +80,21 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<AMP_LightInfantry>1</AMP_LightInfantry>
+					<AMP_LightInfantry_FMJ>1</AMP_LightInfantry_FMJ>
 				</options>
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<AMP_LightInfantry>2</AMP_LightInfantry>
-					<AMP_HeavyInfantry>1</AMP_HeavyInfantry>
+					<AMP_LightInfantry_FMJ>2</AMP_LightInfantry_FMJ>
+					<AMP_HeavyInfantry_FMJ>1</AMP_HeavyInfantry_FMJ>
+				</options>
+			</li>
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<AMP_LightInfantry_API>2</AMP_LightInfantry_API>
+					<AMP_HeavyInfantry_API>1</AMP_HeavyInfantry_API>
 				</options>
 			</li>
 		</pawnGroupMakers>
