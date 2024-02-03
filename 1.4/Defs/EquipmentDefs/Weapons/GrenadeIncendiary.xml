@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ==================== Incendiary grenade ========================== -->
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>amp_Proj_GrenadeIncendiary</defName>
+		<label>incendiary grenade</label>
+		<graphicData>
+			<texPath>Modernization/Weapons/PROJECTILE/IncendiaryGrenade_projectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>PrometheumFlame</damageDef>
+			<damageAmountBase>11</damageAmountBase>
+			<explosionDelay>70</explosionDelay>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			<dropsCasings>true</dropsCasings>
+			<casingMoteDefname>Fleck_GrenadePin</casingMoteDefname>
+			<casingFilthDefname>Filth_GrenadeAmmoCasings</casingFilthDefname>
+			<speed>12</speed>
+			<screenShakeFactor>0.5</screenShakeFactor>
+			<suppressionFactor>3.0</suppressionFactor>
+			<dangerFactor>2.0</dangerFactor>
+			<airborneSuppressionFactor>0.25</airborneSuppressionFactor>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<Fragment_Small>6</Fragment_Small>
+				</fragments>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
+		<defName>amp_GrenadeIncendiary</defName>
+		<equipmentType>Primary</equipmentType>
+		<label>incendiary grenade</label>
+		<description>A cylindrical incendiary grenade, lighter and more compact than a molotov cocktail but perfomrs slightly better due to improved materials.</description>
+		<graphicData>
+			<texPath>Modernization/Weapons/IncendiaryGrenade</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<stackLimit>50</stackLimit>
+		<statBases>
+			<Mass>0.5</Mass>
+			<Bulk>1.45</Bulk>
+			<MarketValue>12</MarketValue>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+		</statBases>
+		<generateCommonality>1</generateCommonality>
+		<weaponTags>
+			<li>CE_AI_Grenade</li>
+			<li>CE_AI_AOE</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>AMP_Grenade</li>
+			<li>AMP_Incendiary</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li Class="CombatExtended.VerbPropertiesCE">
+				<label>throw incendiary grenade</label>
+				<verbClass>CombatExtended.Verb_ShootCEOneUse</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>10.0</range>
+				<minRange>2.9</minRange>
+				<warmupTime>0.8</warmupTime>
+				<noiseRadius>3</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>amp_Proj_GrenadeIncendiary</defaultProjectile>
+				<onlyManualCast>true</onlyManualCast>
+				<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+			</li>
+		</verbs>
+		<detonateProjectile>amp_Proj_GrenadeIncendiary</detonateProjectile>
+	</ThingDef>
+	
+	
+	<RecipeDef ParentName="GrenadeRecipeBase">
+		<defName>MakeIncendiaryGrenade</defName>
+		<label>make incendiary grenades x10</label>
+		<description>Craft 10 incendiary grenades.</description>
+		<jobString>Making incendiary grenades.</jobString>
+		<researchPrerequisite>Machining</researchPrerequisite>
+		<workAmount>4200</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Prometheum</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>FSX</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>FSX</li>
+				<li>Prometheum</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<amp_GrenadeIncendiary>10</amp_GrenadeIncendiary>
+		</products>
+	</RecipeDef>
+
+</Defs>

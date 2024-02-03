@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo12Gauge</defName>
+		<label>12 gauge</label>
+		<parent>AmmoShotguns</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberShotgun</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_12GaugeBelted</defName>
+		<label>12 Gauge Belted</label>
+		<ammoTypes>
+			<Ammo_12GaugeBelted_TungstenBuck>Bullet_12GaugeBelted_TungstenBuck</Ammo_12GaugeBelted_TungstenBuck>
+			<Ammo_12GaugeBelted_Flechette>Bullet_12GaugeBelted_Flechette</Ammo_12GaugeBelted_Flechette>
+			<Ammo_12GaugeBelted_Sabot>Bullet_12GaugeBelted_Sabot</Ammo_12GaugeBelted_Sabot>
+			<Ammo_12Gauge_ElectroSlug>Bullet_12GaugeBelted_ElectroSlug</Ammo_12Gauge_ElectroSlug>
+			<Ammo_12Gauge_Buck>Bullet_12Gauge_Buck</Ammo_12Gauge_Buck>
+		</ammoTypes>
+		<similarTo>AmmoSet_Shotgun</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="12GaugeBase" ParentName="AmmoBase" Abstract="True">
+		<description>Extremely common shotgun caliber used in almost every application, from hunting over riot control to military firearms.</description>
+		<statBases>
+			<Mass>0.045</Mass>
+			<Bulk>0.06</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo12Gauge</li>
+		</thingCategories>
+		<stackLimit>5000</stackLimit>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12GaugeBase">
+		<defName>Ammo_12GaugeBelted_TungstenBuck</defName>
+		<label>12 gauge belted (Tungsten Buck)</label>
+		<graphicData>
+			<texPath>Modernization/Weapons/12gaBelted/TungstenBuck</texPath>
+			<graphicClass>CombatExtended.Graphic_StackCountRanged</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.35</MarketValue>
+		</statBases>
+		<ammoClass>APBuck</ammoClass>
+		<generateAllowChance>1.5</generateAllowChance>
+		<cookOffProjectile>Bullet_12Gauge_Buck</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12GaugeBase">
+		<defName>Ammo_12GaugeBelted_Flechette</defName>
+		<label>12 gauge belted (Flechette)</label>
+		<graphicData>
+			<texPath>Modernization/Weapons/12gaBelted/Flechette</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.037</Mass>
+			<MarketValue>0.25</MarketValue>
+		</statBases>
+		<ammoClass>Flechette</ammoClass>
+		<generateAllowChance>1.5</generateAllowChance>
+		<cookOffProjectile>Bullet_12Gauge_Buck</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12GaugeBase">
+		<defName>Ammo_12GaugeBelted_Sabot</defName>
+		<label>12 gauge belted (Sabot)</label>
+		<graphicData>
+			<texPath>Modernization/Weapons/12gaBelted/Sabot</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.032</Mass>
+			<MarketValue>0.27</MarketValue>
+		</statBases>
+		<ammoClass>Sabot</ammoClass>
+		<generateAllowChance>1</generateAllowChance>
+		<cookOffProjectile>Bullet_12Gauge_Slug</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="Base12GaugeBullet" ParentName="BaseBulletCE" Abstract="true">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<dropsCasings>true</dropsCasings>
+			<casingMoteDefname>Fleck_ShotgunShell</casingMoteDefname>
+			<casingFilthDefname>Filth_ShotgunAmmoCasings</casingFilthDefname>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12GaugeBullet">
+		<defName>Bullet_12GaugeBelted_TungstenBuck</defName>
+		<label>buckshot pellet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>113</speed>
+			<damageAmountBase>10</damageAmountBase>
+			<pelletCount>8</pelletCount>
+			<armorPenetrationSharp>8</armorPenetrationSharp>
+			<armorPenetrationBlunt>10</armorPenetrationBlunt>
+			<spreadMult>7.5</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12GaugeBullet">
+		<defName>Bullet_12GaugeBelted_Flechette</defName>
+		<label>shotgun flechette</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>165</speed>
+			<damageAmountBase>6</damageAmountBase>
+			<pelletCount>16</pelletCount>
+			<armorPenetrationSharp>5.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>6</armorPenetrationBlunt>
+			<spreadMult>9</spreadMult>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="Base12GaugeBullet">
+		<defName>Bullet_12GaugeBelted_Sabot</defName>
+		<label>shotgun sabot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>150</speed>
+			<damageAmountBase>15</damageAmountBase>
+			<armorPenetrationSharp>13</armorPenetrationSharp>
+			<armorPenetrationBlunt>77</armorPenetrationBlunt>
+			<spreadMult>8</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12GaugeBullet">
+		<defName>Bullet_12GaugeBelted_ElectroSlug</defName>
+		<label>EMP slug</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(68,210,215)</color>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<speed>55</speed>
+			<damageDef>EMP</damageDef>
+			<damageAmountBase>13</damageAmountBase>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>0</armorPenetrationBlunt>
+			<empShieldBreakChance>0.2</empShieldBreakChance>
+			<casingMoteDefname>Fleck_ShotgunShell_Black</casingMoteDefname>
+			<casingFilthDefname>Filth_ShotgunAmmoCasings_Black</casingFilthDefname>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12GaugeBelted_TungstenBuck</defName>
+		<label>make 12 gauge (Tungsten Buck) shell x200</label>
+		<description>Craft 200 12 gauge (Tungsten Buck) shells.</description>
+		<jobString>Making 12 gauge (Tungsten Buck) shells.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12GaugeBelted_TungstenBuck>200</Ammo_12GaugeBelted_TungstenBuck>
+		</products>
+		<workAmount>2500</workAmount>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12GaugeBelted_Flechette</defName>
+		<label>make 12 gauge (Flechette) shell x200</label>
+		<description>Craft 200 12 gauge (Flechette) shells.</description>
+		<jobString>Making 12 gauge (Flechette) shells.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12GaugeBelted_Flechette>200</Ammo_12GaugeBelted_Flechette>
+		</products>
+		<workAmount>2300</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_12GaugeBelted_Sabot</defName>
+		<label>make 12 gauge belted (Sabot) shell x200</label>
+		<description>Craft 200 12 gauge belted (Slug) shells.</description>
+		<jobString>Making 12 gauge belted (Slug) shells.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Chemfuel</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+				<li>Chemfuel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12GaugeBelted_Sabot>200</Ammo_12GaugeBelted_Sabot>
+		</products>
+		<workAmount>2500</workAmount>
+	</RecipeDef>
+
+</Defs>

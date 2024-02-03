@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="ArmorHelmetMakeableBase">
+		<defName>amp_NightVision</defName>
+		<label>night vision goggles (helmet mount)</label>
+		<description>Night vision goggles and battery pack mounted on helmet.</description>
+		<graphicData>
+			<texPath>Modernization/Apparel/MountedNV/MountedNV</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<possessionCount>1</possessionCount>
+		<techLevel>Industrial</techLevel>
+		<generateAllowChance>0.5</generateAllowChance>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>CE_SimpleNV</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<Plasteel>15</Plasteel>
+		</costList>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.7</Mass>
+			<Bulk>3</Bulk>
+			<WornBulk>1</WornBulk>
+			<EquipDelay>0.5</EquipDelay>
+			<NightVisionEfficiency_Apparel>0.48</NightVisionEfficiency_Apparel>
+		</statBases>
+		<apparel>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Eyes</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Modernization/Apparel/MountedNV/MountedNV</wornGraphicPath>
+			<layers>
+				<li>StrappedHead</li>
+				<li>EyeCover</li>
+			</layers>
+			<tags>
+				<li>amp_NV</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<hatRenderedFrontOfFace>false</hatRenderedFrontOfFace>
+		</apparel>
+		<thingCategories Inherit="False">
+			<li>Headgear</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Armor</li>
+		</tradeTags>
+	</ThingDef>
+
+</Defs>

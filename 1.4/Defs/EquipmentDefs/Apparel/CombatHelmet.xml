@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ==================== Heavy Composite Helmet ==================== -->
+
+  <ThingDef ParentName="ArmorMachineableBase">
+    <defName>amp_CommandoHelmet</defName>
+    <label>combat helmet (digital camo)</label>
+    <description>Composite helmet with ear protectors and mounting points for night vision.</description>
+    <graphicData>
+      <texPath>Modernization/Apparel/Digi-Helmet/Digi-Helmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <recipeMaker>
+      <researchPrerequisite>FlakArmor</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Steel>25</Steel>
+      <DevilstrandCloth>15</DevilstrandCloth>
+    </costList>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Mass>1.2</Mass>
+      <ArmorRating_Sharp>8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>12</ArmorRating_Blunt>
+      <Bulk>4</Bulk>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <thingCategories Inherit='False'>
+      <li>ArmorHeadgear</li>
+    </thingCategories>
+    <apparel>
+      <wornGraphicPath>Modernization/Apparel/Digi-Helmet/Digi-Helmet</wornGraphicPath>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <tags>
+        <li>amp_MediumArmor</li>
+        <li>amp_LightArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+</Defs>

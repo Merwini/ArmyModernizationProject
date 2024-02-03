@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>APBuck</defName>
+		<label>AP buck</label>
+		<labelShort>APbuck</labelShort>
+		<description>Filled with buckshot pellets of a dense hard metal like tungsten.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>Flechette</defName>
+		<label>flechette</label>
+		<labelShort>flechette</labelShort>
+		<description>Filled with a large number of flechette darts.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+</Defs>
