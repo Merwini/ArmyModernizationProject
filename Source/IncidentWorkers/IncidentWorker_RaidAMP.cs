@@ -1,5 +1,4 @@
 ﻿using RimWorld;
-using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +22,7 @@ namespace nuff.ArmyModernizationProject
 				return false;
             }
 
-            ampSites = FindAmpSites();
+            ampSites = AMP_Utils.FindAmpSites();
 
             //TODO casualty tracker - faction will send fewer raids the higher their casualty rate is
 
@@ -80,37 +79,6 @@ namespace nuff.ArmyModernizationProject
                 }
                 return false;
             }
-        }
-
-        public override void ResolveRaidArriveMode(IncidentParms parms)
-        {
-            //TODO
-        }
-
-        public List<SitePartDef> FindAmpSites()
-        {
-            List<SitePartDef> activeAmpSitePartDefs = new List<SitePartDef>();
-
-            List<Site> worldSites = Find.WorldObjects.Sites;
-            foreach (Site site in worldSites)
-            {
-                if (site == null)
-                    break;
-
-                SitePartDef mainSitePartDef = site.MainSitePartDef;
-                if (mainSitePartDef == null)
-                    break;
-
-                foreach (string tag in mainSitePartDef.tags)
-                {
-                    if (tag.StartsWith("amp_"))
-                    {
-                        activeAmpSitePartDefs.Add(mainSitePartDef);
-                    }
-                }
-            }
-
-            return activeAmpSitePartDefs;
         }
     }
 }
