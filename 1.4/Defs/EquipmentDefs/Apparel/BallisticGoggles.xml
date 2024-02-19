@@ -4,7 +4,7 @@
 	<!-- ==================== Ballistic Goggles ==================== -->
 
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
-		<defName>amp_BallisticGoggles</defName>
+		<defName>AMP_BallisticGoggles</defName>
 		<label>fragmentation goggles</label>
 		<description>A pair of reinforced goggles capable of stopping shrapnel.</description>
 		<graphicData>

@@ -4,9 +4,9 @@
 	<!-- ==================== Heavy Composite Helmet ==================== -->
 
 	<ThingDef ParentName="ArmorMachineableBase">
-		<defName>amp_</defName>
+		<defName>AMP_HeavyHelmet</defName>
 		<label>heavy composite helmet</label>
-		<description>Rifle reated heavy helmet, face palte features compact builtin nightvision device.</description>
+		<description>Rifle rated heavy helmet. Its face plate features a compact builtin nightvision device.</description>
 		<graphicData>
 			<texPath>Modernization/Apparel/Digi-HeavyHelmetFull/Digi-HeavyHelmetFull</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -55,7 +55,7 @@
 				<li>StrappedHead</li>
 			</layers>
 			<tags>
-				<li>amp_HeavyArmor</li>
+				<li>AMP_HeavyArmor</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>

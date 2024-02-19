@@ -4,9 +4,9 @@
 	<!-- ==================== M7 ==================== -->
 
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>amp_M7dmr</defName>
+		<defName>AMP_M7dmr</defName>
 		<label>M7 DMR</label>
-		<description>Standard military battle rifle using the high velocity .277 cartridge, fitted with midrange scope for unit's marksmen.</description>
+		<description>A late-industrial military designated marksman rifle using the high velocity .277 cartridge. Fitted with midrange scope and deployable bipod for a unit's marksmen.</description>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<graphicData>
 			<texPath>Modernization/Weapons/M7-DMR</texPath>
@@ -27,8 +27,8 @@
 			<Chemfuel>5</Chemfuel>
 		</costList>
 		<weaponTags>
-      <li>CE_AI_SR</li>
-      <li>Bipod_DMR</li>
+			<li>CE_AI_SR</li>
+			<li>Bipod_DMR</li>
 			<li>AMP_DMR</li>
 		</weaponTags>
 		<verbs>

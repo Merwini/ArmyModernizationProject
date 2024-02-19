@@ -4,9 +4,9 @@
 	<!-- == CAWS-M === -->
 		
   <ThingDef ParentName="BaseMakeableGun">		
-		<defName>amp_CAWS-Mshotgun</defName>
-		<label>CAWS-M Tactical</label>
-		<description>Modernized bullpup automatic military shotgun fitted with holo sight and flashlight, using specialized 12gauge belted ammo for significantyl higher performance</description>
+	<defName>AMP_CAWS-Mshotgun</defName>
+	<label>CAWS-M Tactical</label>
+	<description>A late-industrial bullpup automatic military shotgun, chambered for 12-gauge shells. Fitted with a holo sight and flashlight. Specialized belted ammo offers significantly higher performance.</description>
     <soundInteract>Interact_Shotgun</soundInteract>
     <graphicData>
       <texPath>Modernization/Weapons/CAWS-M</texPath>

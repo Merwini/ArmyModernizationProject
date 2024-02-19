@@ -4,9 +4,9 @@
 	<!-- ==================== M250 ==================== -->
 
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>amp_M250lmg</defName>
+		<defName>AMP_M250lmg</defName>
 		<label>M250</label>
-		<description>Standard military battle rifle using the high velocity .277 cartridge, fitted with holographic sight.</description>
+		<description>A late-industrial military light machine gun using the high velocity .277 cartridge. Fitted with a holographic sight and high-capacity ammo feed pouch.</description>
 		<graphicData>
 			<texPath>Modernization/Weapons/M250</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

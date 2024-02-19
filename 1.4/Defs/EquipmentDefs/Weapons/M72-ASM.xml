@@ -4,9 +4,9 @@
   <!-- ==================== M72 ASM ==================== -->
 
   <ThingDef ParentName="BaseEquipment">
-    <defName>amp_M72-ASM</defName>
+    <defName>AMP_M72-ASM</defName>
     <label>M72 anti-structure munition</label>
-    <description>Modernized high-explosive variant of the M72, compact light anti-structure and anti-personel rocket launcher, has higher effective range than the antitank warhead.</description>
+    <description>Modernized high-explosive variant of the M72, compact light anti-structure and anti-personnel rocket launcher. Has higher effective range than the antitank warhead.</description>
     <graphicData>
       <texPath>Modernization/Weapons/M72-ASM</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -203,7 +203,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <amp_M72-ASM>5</amp_M72-ASM>
+      <AMP_M72-ASM>5</AMP_M72-ASM>
     </products>
     <researchPrerequisite>CE_Launchers</researchPrerequisite>
   </RecipeDef>

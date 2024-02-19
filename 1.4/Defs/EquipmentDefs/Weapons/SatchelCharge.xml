@@ -4,7 +4,7 @@
 	<!-- ==================== Incendiary grenade ========================== -->
 
 	<ThingDef ParentName="BaseGrenadeProjectile">
-		<defName>amp_Proj_SatchelCharge</defName>
+		<defName>AMP_Proj_SatchelCharge</defName>
 		<label>satchel charge</label>
 		<graphicData>
 			<texPath>Modernization/Weapons/PROJECTILE/Satchel_projectile</texPath>
@@ -32,7 +32,7 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
-		<defName>amp_SatchelCharge</defName>
+		<defName>AMP_SatchelCharge</defName>
 		<equipmentType>Primary</equipmentType>
 		<label>satchel charge</label>
 		<description>A demolition charge for breaching and sabotage.</description>
@@ -75,13 +75,13 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-				<defaultProjectile>amp_Proj_SatchelCharge</defaultProjectile>
+				<defaultProjectile>AMP_Proj_SatchelCharge</defaultProjectile>
 				<onlyManualCast>true</onlyManualCast>
 				<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
 				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
-		<detonateProjectile>amp_Proj_SatchelCharge</detonateProjectile>
+		<detonateProjectile>AMP_Proj_SatchelCharge</detonateProjectile>
 	</ThingDef>
 	
 	
@@ -127,7 +127,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<amp_SatchelCharge>5</amp_SatchelCharge>
+			<AMP_SatchelCharge>5</AMP_SatchelCharge>
 		</products>
 	</RecipeDef>
 

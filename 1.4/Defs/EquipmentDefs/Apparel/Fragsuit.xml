@@ -3,7 +3,7 @@
 
 	
   <ThingDef ParentName="ApparelMakeableBase">
-    <defName>amp_Fragsuit</defName>
+    <defName>AMP_Fragsuit</defName>
     <label>fragmentation overall</label>
     <description>Thick overall with fragmentation rated armor sewn into the plates not covered by the infantryman's plate carrier. Includes gloves and boots.</description>
     <graphicData>
@@ -55,7 +55,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <li>amp_MediumArmor</li>
+        <li>AMP_MediumArmor</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>

@@ -4,7 +4,7 @@
 	<!-- ==================== Incendiary grenade ========================== -->
 
 	<ThingDef ParentName="BaseGrenadeProjectile">
-		<defName>amp_Proj_GrenadeIncendiary</defName>
+		<defName>AMP_Proj_GrenadeIncendiary</defName>
 		<label>incendiary grenade</label>
 		<graphicData>
 			<texPath>Modernization/Weapons/PROJECTILE/IncendiaryGrenade_projectile</texPath>
@@ -35,10 +35,10 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeEquipment">
-		<defName>amp_GrenadeIncendiary</defName>
+		<defName>AMP_GrenadeIncendiary</defName>
 		<equipmentType>Primary</equipmentType>
 		<label>incendiary grenade</label>
-		<description>A cylindrical incendiary grenade, lighter and more compact than a molotov cocktail but perfomrs slightly better due to improved materials.</description>
+		<description>A cylindrical incendiary grenade, lighter and more compact than a molotov cocktail but performs slightly better due to improved materials.</description>
 		<graphicData>
 			<texPath>Modernization/Weapons/IncendiaryGrenade</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -78,13 +78,13 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-				<defaultProjectile>amp_Proj_GrenadeIncendiary</defaultProjectile>
+				<defaultProjectile>AMP_Proj_GrenadeIncendiary</defaultProjectile>
 				<onlyManualCast>true</onlyManualCast>
 				<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
 				<ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
 			</li>
 		</verbs>
-		<detonateProjectile>amp_Proj_GrenadeIncendiary</detonateProjectile>
+		<detonateProjectile>AMP_Proj_GrenadeIncendiary</detonateProjectile>
 	</ThingDef>
 	
 	
@@ -138,7 +138,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<amp_GrenadeIncendiary>10</amp_GrenadeIncendiary>
+			<AMP_GrenadeIncendiary>10</AMP_GrenadeIncendiary>
 		</products>
 	</RecipeDef>
 

@@ -4,7 +4,7 @@
   <!-- ==================== M72-74 ==================== -->
 
   <ThingDef ParentName="BaseEquipment">
-    <defName>amp_M72-INC</defName>
+    <defName>AMP_M72-INC</defName>
     <label>M72-74 incendiary munition</label>
     <description>M72 variant refitted to shoot M74 incendiary rockets.</description>
     <graphicData>
@@ -203,7 +203,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <amp_M72-INC>5</amp_M72-INC>
+      <AMP_M72-INC>5</AMP_M72-INC>
     </products>
     <researchPrerequisite>CE_Launchers</researchPrerequisite>
   </RecipeDef>

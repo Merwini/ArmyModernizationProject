@@ -4,7 +4,7 @@
 	<!-- ==================== Plate carrier ==================== -->
 
    <ThingDef ParentName="ArmorMachineableBase">
-    <defName>amp_ArmorVest</defName>
+    <defName>AMP_ArmorVest</defName>
     <label>armor vest (digital camo)</label>
     <description>Improved plate carrier with lightened construction and minor protection improvement.</description>
     <techLevel>Industrial</techLevel>
@@ -54,8 +54,8 @@
         <li>Webbing</li>
       </layers>
       <tags>
-        <li>amp_MediumArmor</li>
-        <li>amp_LightArmor</li>
+        <li>AMP_MediumArmor</li>
+        <li>AMP_LightArmor</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>

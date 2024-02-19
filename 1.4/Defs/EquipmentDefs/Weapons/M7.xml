@@ -4,9 +4,9 @@
 	<!-- ==================== M7 ==================== -->
 
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>amp_M7rifle</defName>
+		<defName>AMP_M7rifle</defName>
 		<label>M7</label>
-		<description>Standard military battle rifle using the high velocity .277 cartridge, fitted with holographic sight for close combat.</description>
+		<description>A late-industrial military battle rifle using the high velocity .277 cartridge. Fitted with a holographic sight for close combat.</description>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<graphicData>
 			<texPath>Modernization/Weapons/M7</texPath>

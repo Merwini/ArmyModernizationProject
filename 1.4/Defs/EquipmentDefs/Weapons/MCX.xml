@@ -4,9 +4,9 @@
 	<!-- ==================== SIG MCX ==================== -->
 
 	<ThingDef ParentName="BaseHumanMakeableGun">
-		<defName>amp_MCX300BLcarbine</defName>
+		<defName>AMP_MCX300BLcarbine</defName>
 		<label>MCX carbine</label>
-		<description>MCX platform carbine chambered in .300 blackout cartridge optimized for short barrels, it's controlls are identical to the battle rifle requiring no additonal training.</description>
+		<description>A late-industrial military carbine chambered for the subsonic .300 Blackout cartridge. The slow, heavy rounds are effective at close ranges, but quickly lose effectiveness at range.</description>
 		<graphicData>
 			<texPath>Modernization/Weapons/MCX</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

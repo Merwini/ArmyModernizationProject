@@ -4,7 +4,7 @@
 	<!-- ==================== Heavy Composite Helmet ==================== -->
 
   <ThingDef ParentName="ArmorMachineableBase">
-    <defName>amp_CommandoHelmet</defName>
+    <defName>AMP_CommandoHelmet</defName>
     <label>combat helmet (digital camo)</label>
     <description>Composite helmet with ear protectors and mounting points for night vision.</description>
     <graphicData>
@@ -46,8 +46,8 @@
         <li>Overhead</li>
       </layers>
       <tags>
-        <li>amp_MediumArmor</li>
-        <li>amp_LightArmor</li>
+        <li>AMP_MediumArmor</li>
+        <li>AMP_LightArmor</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>

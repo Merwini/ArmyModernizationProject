@@ -4,7 +4,7 @@
 	<!-- ==================== Large Backpack ==================== -->
 
 	<ThingDef ParentName="ApparelCarryGearBase">
-		<defName>amp_LargeBackpack</defName>
+		<defName>AMP_LargeBackpack</defName>
 		<label>army backpack (digital camo)</label>
 		<description>A large infantry backpack to fit all the needed kit.</description>
 		<graphicData>
@@ -44,7 +44,7 @@
 				<li>Backpack</li>
 			</layers>
 			<tags>
-				<li>amp_Backpack</li>
+				<li>AMP_Backpack</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>

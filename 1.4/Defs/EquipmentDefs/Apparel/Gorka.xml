@@ -4,9 +4,9 @@
   <!-- ==================== Gorka ==================== -->
 
   <ThingDef ParentName="ApparelMakeableBase">
-    <defName>amp_Gorka</defName>
+    <defName>AMP_Gorka</defName>
     <label>cold weather overall (digital camo)</label>
-    <description>An outer garment designed for keeping it's wearer at comfortable cold weather while leaving movement unimpeded. Also can provide near perfect gas sealing if worn with gas mask.</description>
+    <description>An outer garment designed for keeping its wearer at comfortable cold weather while leaving movement unimpeded. Can also provide near perfect gas sealing if worn with a gas mask.</description>
     <graphicData>
       <texPath>Modernization/Apparel/Digi-Gorka/Digi-Gorka</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -52,7 +52,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <li>amp_LightArmor</li>
+        <li>AMP_LightArmor</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>

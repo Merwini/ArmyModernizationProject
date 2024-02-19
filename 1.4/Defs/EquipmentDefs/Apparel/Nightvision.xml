@@ -2,9 +2,9 @@
 <Defs>
 
 	<ThingDef ParentName="ArmorHelmetMakeableBase">
-		<defName>amp_NightVision</defName>
+		<defName>AMP_NightVision</defName>
 		<label>night vision goggles (helmet mount)</label>
-		<description>Night vision goggles and battery pack mounted on helmet.</description>
+		<description>Night vision goggles and battery pack mounted on a helmet.</description>
 		<graphicData>
 			<texPath>Modernization/Apparel/MountedNV/MountedNV</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -43,7 +43,7 @@
 				<li>EyeCover</li>
 			</layers>
 			<tags>
-				<li>amp_NV</li>
+				<li>AMP_NV</li>
 			</tags>
 			<defaultOutfitTags>
 				<li>Soldier</li>
