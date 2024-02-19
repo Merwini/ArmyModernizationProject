@@ -7,13 +7,13 @@
 		</weaponTags>
 		<weaponMoney>600~1400</weaponMoney>
 		<apparelRequired>
-			<li>amp_BattleDress</li>
-			<li>amp_ArmorVest</li>
-			<li>amp_CommandoHelmet</li>
-			<li>amp_LargeBackpack</li>
+			<li>AMP_BattleDress</li>
+			<li>AMP_ArmorVest</li>
+			<li>AMP_CommandoHelmet</li>
+			<li>AMP_LargeBackpack</li>
 		</apparelRequired>
 		<apparelTags>
-			<li>amp_LightArmor</li>
+			<li>AMP_LightArmor</li>
 		</apparelTags>
 		<apparelMoney>1200~1800</apparelMoney>
 	</PawnKindDef>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<PawnKindDef ParentName="AMP_HumanNonComBase" Abstract="True" Name="AMP_NonCom_Armorer_Base">
+		<apparelRequired>
+			<li>AMP_BattleDress</li>
+		</apparelRequired>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AMP_NonCom_Armorer_Base">
+		<defName>AMP_NonCom_Armorer_Poor</defName>
+		<label>armorer (poor)</label>
+		<combatPower>25</combatPower>
+		<skills>
+			<li>
+				<skill>Crafting</skill>
+				<range>1~4</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AMP_NonCom_Armorer_Base">
+		<defName>AMP_NonCom_Armorer_Normal</defName>
+		<label>armorer (normal)</label>
+		<combatPower>50</combatPower>
+		<weaponMoney>150~200</weaponMoney>
+		<weaponTags>
+			<li>CE_Sidearm</li>
+		</weaponTags>
+		<skills>
+			<li>
+				<skill>Crafting</skill>
+				<range>4~7</range>
+			</li>
+		</skills>
+		<modExtensions>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>1</min>
+					<max>2</max>
+				</primaryMagazineCount>
+				<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+</Defs>

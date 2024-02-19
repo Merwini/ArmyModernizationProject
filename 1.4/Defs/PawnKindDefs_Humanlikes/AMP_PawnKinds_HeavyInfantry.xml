@@ -1,22 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<PawnKindDef ParentName="AMP_HumanCombatantBase" Abstract="True" Name ="AMP_HeavyInfantryBase">
-		<combatPower>180</combatPower>
+		<combatPower>240</combatPower>
 		<weaponTags>
 			<li>AMP_BR</li>
 			<li>AMP_LMG</li>
 		</weaponTags>
 		<weaponMoney>600~1700</weaponMoney>
 		<apparelRequired>
-			<li>amp_BattleDress</li>
-			<li>amp_HeavyArmor</li>
-			<li>amp_HeavyHelmet</li>
-			<li>amp_LargeBackpack</li>
+			<li>AMP_BattleDress</li>
+			<li>AMP_HeavyArmor</li>
+			<li>AMP_HeavyHelmet</li>
+			<li>AMP_LargeBackpack</li>
 		</apparelRequired>
-		<apparelTags>
-			<li>amp_LightArmor</li>
-			<li>amp_MediumArmor</li>
-		</apparelTags>
+		<apparelTags/>
 		<apparelMoney>1200~1800</apparelMoney>
 	</PawnKindDef>
 
@@ -73,4 +70,37 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
+	
+	<PawnKindDef ParentName="AMP_HeavyInfantryBase">
+		<defName>AMP_HeavyInfantry_LAW</defName>
+		<label>LAW heavy infantry</label>
+		<combatPower>360</combatPower>
+		<weaponTags>
+			<li>AMP_LAW</li>
+		</weaponTags>
+		<weaponMoney>9999~9999</weaponMoney>
+		<modExtensions>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>0</min>
+					<max>2</max>
+				</primaryMagazineCount>
+				<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>600</min>
+						<max>1400</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>AMP_BR</li>
+					</weaponTags>
+					<magazineCount>
+						<min>3</min>
+						<max>5</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
 </Defs>

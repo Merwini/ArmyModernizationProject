@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<PawnKindDef ParentName="AMP_HumanCombatantBase">
+		<defName>AMP_Paratrooper_Flashbang</defName>
+		<label>flashbang paratrooper</label>
+		<combatPower>666</combatPower>
+		<weaponTags>
+			<li>CE_GrenadeFlashbang</li>
+		</weaponTags>
+		<weaponMoney>9999~9999</weaponMoney>
+		<apparelRequired>
+			<li>AMP_BattleDress</li>
+			<li>AMP_ArmorVest</li>
+			<li>AMP_CommandoHelmet</li>
+			<li>AMP_LargeBackpack</li>
+		</apparelRequired>
+		<modExtensions>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>2</min>
+					<max>3</max>
+				</primaryMagazineCount>
+				<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+				<forcedSidearm>
+					<sidearmMoney>
+						<min>600</min>
+						<max>1400</max>
+					</sidearmMoney>
+					<weaponTags>
+						<li>AMP_PDW</li>
+					</weaponTags>
+					<magazineCount>
+						<min>2</min>
+						<max>5</max>
+					</magazineCount>
+				</forcedSidearm>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+</Defs>

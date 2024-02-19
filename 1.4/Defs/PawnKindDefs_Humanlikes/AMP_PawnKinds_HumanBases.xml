@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<PawnKindDef Name="AMP_HumanBase" Abstract="True">
+		<race>Human</race>
+		<defaultFactionType>AMP_FactionHostile</defaultFactionType>
+		<minGenerationAge>18</minGenerationAge>
+		<maxGenerationAge>45</maxGenerationAge>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AMP_HumanBase" Abstract="True" Name="AMP_HumanCombatantBase" >
+		<isFighter>true</isFighter>
+		<invNutrition>2</invNutrition>
+		<invFoodDef>MealSurvivalPack</invFoodDef>
+		<gearHealthRange>1~1</gearHealthRange>
+		<apparelTags/>
+		<apparelMoney>0~0</apparelMoney>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>16~24</initialResistanceRange>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<disallowedTraits>
+			<li>Wimp</li>
+		</disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AMP_HumanBase" Abstract="True" Name="AMP_HumanNonComBase" >
+		<isFighter>false</isFighter>
+		<invNutrition>2</invNutrition>
+		<invFoodDef>MealSurvivalPack</invFoodDef>
+		<gearHealthRange>1~1</gearHealthRange>
+		<apparelTags/>
+		<apparelMoney>0~0</apparelMoney>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>8~12</initialResistanceRange>
+		<apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
+	</PawnKindDef>
+</Defs>
