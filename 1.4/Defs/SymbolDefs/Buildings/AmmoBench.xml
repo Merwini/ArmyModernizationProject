@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<KCSG.SymbolDef>
+		<defName>AMP_AmmoBench_WoodLog_North</defName>
+		<thing>AmmoBench</thing>
+		<stuff>WoodLog</stuff>
+		<rotation>North</rotation>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>AMP_AmmoBench_WoodLog_East</defName>
+		<thing>AmmoBench</thing>
+		<stuff>WoodLog</stuff>
+		<rotation>East</rotation>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>AMP_AmmoBench_WoodLog_South</defName>
+		<thing>AmmoBench</thing>
+		<stuff>WoodLog</stuff>
+		<rotation>South</rotation>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>AMP_AmmoBench_WoodLog_West</defName>
+		<thing>AmmoBench</thing>
+		<stuff>WoodLog</stuff>
+		<rotation>West</rotation>
+	</KCSG.SymbolDef>
+</Defs>

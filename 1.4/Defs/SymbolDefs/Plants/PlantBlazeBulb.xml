@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<KCSG.SymbolDef>
+		<defName>AMP_PlantBlazebulb_Grown</defName>
+		<thing>PlantBlazebulb</thing>
+		<plantGrowth>1</plantGrowth>
+	</KCSG.SymbolDef>
+	
+	<KCSG.SymbolDef>
+		<defName>AMP_PlantBlazebulb_Half</defName>
+		<thing>PlantBlazebulb</thing>
+		<plantGrowth>0.5</plantGrowth>
+	</KCSG.SymbolDef>
+</Defs>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<KCSG.SymbolDef>
+		<defName>AMP_Ammo_277Fury_Incendiary_Small</defName>
+		<thing>Ammo_277Fury_Incendiary</thing>
+		<maxStackSize>120</maxStackSize>
+	</KCSG.SymbolDef>
+</Defs>
