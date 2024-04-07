@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<IncidentDef>
+		<defName>AMP_TacRaid</defName>
+		<label>tactical raid</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>nuff.ArmyModernizationProject.IncidentWorker_RaidAMP</workerClass>
+		<!--TODO the chances on all incidents might be too high?-->
+		<baseChance>11.1</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+	</IncidentDef>
+
+	<IncidentDef Abstract="True" Name="AMP_ExpBase">
+		<category>Misc</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<letterDef>NeutralEvent</letterDef>
+		<letterText>Intelligence reports indicate that {0} has completed construction of a {1}. {2}</letterText>
+	</IncidentDef>
+
+	<IncidentDef ParentName="AMP_ExpBase">
+		<defName>AMP_Expansion</defName>
+		<label>AMP expansion</label>
+		<workerClass>nuff.ArmyModernizationProject.IncidentWorker_ExpansionAMP</workerClass>
+		<letterLabel>Military expansion</letterLabel>
+		<baseChance>2.6</baseChance>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>15</minRefireDays>
+	</IncidentDef>
+</Defs>

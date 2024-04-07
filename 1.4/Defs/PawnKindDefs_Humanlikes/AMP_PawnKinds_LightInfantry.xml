@@ -37,8 +37,8 @@
 						<li>CE_Sidearm</li>
 					</weaponTags>
 					<magazineCount>
-						<min>2</min>
-						<max>5</max>
+						<min>1</min>
+						<max>1</max>
 					</magazineCount>
 				</forcedSidearm>
 			</li>
@@ -64,8 +64,8 @@
 						<li>CE_Sidearm</li>
 					</weaponTags>
 					<magazineCount>
-						<min>2</min>
-						<max>5</max>
+						<min>1</min>
+						<max>1</max>
 					</magazineCount>
 				</forcedSidearm>
 			</li>

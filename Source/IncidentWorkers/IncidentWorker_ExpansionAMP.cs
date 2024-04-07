@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿
+using RimWorld;
 using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
@@ -15,16 +16,13 @@ namespace nuff.ArmyModernizationProject
         //internal List<SitePartDef> existingAMPSites;
         internal List<SitePartDef> eligibleAMPSites;
         
-
-        internal Faction faction;
         internal SitePartDef ampDef;
         internal int tile;
         internal Site site;
 
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            //TODO casualty tracking influencing how often raids occur
-            return true;
+            return (float)GenDate.DaysPassedSinceSettle >= AMP_Settings.earliestExpansionDays;
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -32,19 +30,19 @@ namespace nuff.ArmyModernizationProject
             if (!TryResolveExpansionFaction(parms))
                 return false;
 
-            if (!TryResolveExpansionDef())
+            if (!TryResolveExpansionDef(parms))
                 return false;
 
             if (!TrySelectTile())
                 return false;
 
-            if (!TryMakeSite())
+            if (!TryMakeSite(parms))
                 return false;
 
             if (!TryPlaceSite())
                 return false;
 
-            SendStandardLetter(parms, site); //TODO set up letter and translate
+            SendStandardLetter(parms, site, parms.faction.Name, site.Label, ""); //TODO set up letter and translate //TODO find a way to sneak explanations into site info
 
             return true;
         }
@@ -52,14 +50,13 @@ namespace nuff.ArmyModernizationProject
         internal bool TryResolveExpansionFaction(IncidentParms parms)
         {
             //Early return for debug tool forcing a chosen faction
-            if (parms.faction != null && ((parms.faction.def == AMP_DefOf.AMP_FactionHostile) || (parms.faction.def == AMP_DefOf.AMP_FactionFriendly)))
+            if (parms.faction != null && parms.faction.def is AMP_FactionDef)
             {
-                faction = parms.faction;
                 return true;
             }
 
             //Get a list of AMP factions. Incident fails if no legal targets are available.
-            ampFactions = Find.FactionManager.AllFactions.Where(f => (f.def == AMP_DefOf.AMP_FactionFriendly || f.def == AMP_DefOf.AMP_FactionHostile)).ToList();
+            ampFactions = Find.FactionManager.AllFactions.Where(f => (f.def is AMP_FactionDef)).ToList();
             if (!AMP_Settings.FriendlyAMPsCanExpand)
             {
                 ampFactions = ampFactions.Where(f => f.HostileTo(Find.FactionManager.OfPlayer)).ToList();
@@ -68,12 +65,12 @@ namespace nuff.ArmyModernizationProject
             if (ampFactions.NullOrEmpty())
                 return false;
 
-            return ampFactions.TryRandomElement(out faction);
+            return ampFactions.TryRandomElement(out parms.faction);
         }
 
-        internal virtual bool TryResolveExpansionDef()
+        internal virtual bool TryResolveExpansionDef(IncidentParms parms)
         {
-            eligibleAMPSites = AMP_Utils.FindEligibleAMPSiteDefsFor(faction);
+            eligibleAMPSites = AMP_Utils.FindEligibleAMPSiteDefsFor(parms.faction);
 
             if (eligibleAMPSites.NullOrEmpty())
                 return false;
@@ -91,9 +88,9 @@ namespace nuff.ArmyModernizationProject
             return tile >= 0;
         }
         
-        internal bool TryMakeSite()
+        internal bool TryMakeSite(IncidentParms parms)
         {
-            site = SiteMaker.MakeSite(ampDef, tile, faction);
+            site = SiteMaker.MakeSite(ampDef, tile, parms.faction);
             site.sitePartsKnown = true; //TODO site that hides information for sites
 
             return site != null;

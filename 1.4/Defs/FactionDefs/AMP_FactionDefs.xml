@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	
-	<FactionDef ParentName="FactionBase" Abstract="True" Name="AMP_FactionBase">
+	<nuff.ArmyModernizationProject.AMP_FactionDef ParentName="FactionBase" Abstract="True" Name="AMP_FactionBase">
 		<autoFlee>true</autoFlee>
 		<permanentEnemy>false</permanentEnemy>
 		<canStageAttacks>true</canStageAttacks>
@@ -79,28 +79,58 @@
 		<pawnGroupMakers>
 			<li>
 				<kindDef>Combat</kindDef>
+				<debugName>LightFMJ</debugName>
+				<commonality>10</commonality>
+				<allowedRaidStrategies>
+					<li>ImmediateAttackSmart</li>
+				</allowedRaidStrategies>
+				<allowedArrivalModes>
+					<li>EdgeWalkIn</li>
+					<li>EdgeWalkInGroups</li>
+				</allowedArrivalModes>
 				<options>
 					<AMP_LightInfantry_FMJ>1</AMP_LightInfantry_FMJ>
 				</options>
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
+				<debugName>LightLightHeavyFMJ</debugName>
+				<commonality>10</commonality>
+				<allowedRaidStrategies>
+					<li>ImmediateAttackSmart</li>
+				</allowedRaidStrategies>
+				<allowedArrivalModes>
+					<li>EdgeWalkIn</li>
+					<li>EdgeWalkInGroups</li>
+				</allowedArrivalModes>
 				<options>
-					<AMP_LightInfantry_FMJ>2</AMP_LightInfantry_FMJ>
 					<AMP_HeavyInfantry_FMJ>1</AMP_HeavyInfantry_FMJ>
+					<AMP_LightInfantry_FMJ>2</AMP_LightInfantry_FMJ>
 				</options>
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
+				<debugName>LightLightHeavyAPI</debugName>
+				<commonality>10</commonality>
+				<requiredSiteTags>
+					<li>AMP_PGM_Incendiary</li>
+				</requiredSiteTags>
+				<allowedRaidStrategies>
+					<li>ImmediateAttackSmart</li>
+				</allowedRaidStrategies>
+				<allowedArrivalModes>
+					<li>EdgeWalkIn</li>
+					<li>EdgeWalkInGroups</li>
+				</allowedArrivalModes>
 				<options>
-					<AMP_LightInfantry_API>2</AMP_LightInfantry_API>
 					<AMP_HeavyInfantry_API>1</AMP_HeavyInfantry_API>
+					<AMP_LightInfantry_API>2</AMP_LightInfantry_API>
 				</options>
 			</li>
 		</pawnGroupMakers>
-	</FactionDef>
+	</nuff.ArmyModernizationProject.AMP_FactionDef>
 
-	<FactionDef ParentName="AMP_FactionBase">
+	<nuff.ArmyModernizationProject.AMP_FactionDef ParentName="AMP_FactionBase">
 		<defName>AMP_FactionHostile</defName>
 		<label>hostile mercenary company</label>
 		<description>A late-industrial mercenary company hired by offworlders to eliminate inhabitants of this RimWorld in preparation of future mining operations. Despite their limited technology, they will use more advanced military tactics than other factions.</description>
@@ -122,9 +152,9 @@
 		<requiredMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
 		</requiredMemes>
-	</FactionDef>
+	</nuff.ArmyModernizationProject.AMP_FactionDef>
 
-	<FactionDef ParentName="AMP_FactionBase">
+	<nuff.ArmyModernizationProject.AMP_FactionDef ParentName="AMP_FactionBase">
 		<defName>AMP_FactionFriendly</defName>
 		<label>neutral mercenary company</label>
 		<description>A late-industrial mercenary company hired by offworlders to eliminate threats in preparation of future mining operations on this RimWorld. If provoked, they will use more advanced military tactics than other factions.</description>
@@ -141,6 +171,6 @@
 		<allowedCultures>
 			<li>Rustican</li>
 		</allowedCultures>
-	</FactionDef>
+	</nuff.ArmyModernizationProject.AMP_FactionDef>
 	
 </Defs>

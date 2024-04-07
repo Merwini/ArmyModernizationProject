@@ -10,11 +10,12 @@ TryExecute checks if the incident requires pawns on the map and, if so, that paw
 
 Default raid TryExecuteWorker:
 	Calls TryGenerateRaidInfo(IncidentParms parms, out List<Pawn> pawns, bool debugTest = false)
+		Clears pawns list
 		Calls ResolveRaidPoints
 			makes sure that parms.points is greater than 0
 		Calls TryResolveRaidFaction !!! NEED TO OVERRIDE
 			if the parms already has a faction set, early return (for if player forces raid from specific faction via debug tool)
-			Tries to select a random faction for the raid, weighted against whichever faction raided last
+			Tries to select a random faction for the raid, weighted against whichever faction raided last, and has to have a PawnGroupMaker that matches the PawnGroupKind (i.e. Combat)
 			If that fails, tries again but with flag desperate which makes it ignore earliestRaidDays in the factionDef (e.g. for mechanoids)
 		Calls ResolveRaidStrategy !!! NEED TO OVERRIDE
 			checks if the raidStrategy of the parms is legal with the faction (for if specific raidStrategy has been called by debug)

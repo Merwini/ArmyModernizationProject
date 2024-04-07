@@ -50,21 +50,86 @@ namespace nuff.ArmyModernizationProject
             return ampSites;
         }
 
-        public static List<SitePartDef> FindAMPSiteDefsFor(Faction fact)
+        public static List<SitePartDef> FindExistingAMPSiteDefsFor(Faction fact)
         {
-            List<SitePartDef> ampSitePartDefs = new List<SitePartDef>();
-
             List<Site> ampSites = FindAMPSitesFor(fact);
+            List<SitePartDef> ampSitePartDefs = FindDefsForSites(ampSites);
+            
+            return ampSitePartDefs;
+        }
 
-            if (!ampSites.NullOrEmpty())
+        public static List<SitePartDef> FindEligibleAMPSiteDefsFor(Faction fact)
+        {
+            HashSet<SitePartDef> eligibleDefs = new HashSet<SitePartDef>();
+
+            foreach (SitePartDef def in DefDatabase<SitePartDef>.AllDefs)
             {
-                foreach (Site site in ampSites)
+                if (def.tags.Any(tag => tag.StartsWith("AMP_")))
                 {
-                    ampSitePartDefs.Add(site.MainSitePartDef);
+                    eligibleDefs.Add(def);
                 }
             }
 
-            return ampSitePartDefs;
+            List<SitePartDef> usedDefs = FindExistingAMPSiteDefsFor(fact);
+
+            if (!usedDefs.NullOrEmpty())
+            {
+                foreach (SitePartDef def in usedDefs)
+                {
+                    eligibleDefs.Remove(def);
+                }
+            }
+
+            return eligibleDefs.ToList();
+        }
+
+        public static List<SitePartDef> FindDefsForSites(List<Site> sites)
+        {
+            List<SitePartDef> defs = new List<SitePartDef>();
+
+            if (!sites.NullOrEmpty())
+            {
+                foreach (Site site in sites)
+                {
+                    defs.Add(site.MainSitePartDef);
+                }
+            }
+
+            return defs;
+        }
+
+        public static List<string> FindStringsForDefs(List<SitePartDef> defs)
+        {
+            List<string> tags = new List<string>();
+
+            if (!defs.NullOrEmpty())
+            {
+                foreach (SitePartDef def in defs)
+                {
+                    //the list is initialized empty in the class, so no null check needed
+                    foreach (string tag in def.tags)
+                    {
+                        if (tag.StartsWith("AMP_PGM_"))
+                        {
+                            tags.Add(tag);
+                        }
+                    }
+                }
+            }
+
+            return tags;
+        }
+
+        public static bool CheckIfAllTagsPresent(List<string> pgmTags, List<string> siteTags)
+        {
+            foreach (string str in pgmTags)
+            {
+                if (!siteTags.Contains(str))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

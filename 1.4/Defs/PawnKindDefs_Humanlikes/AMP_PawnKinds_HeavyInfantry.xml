@@ -6,15 +6,17 @@
 			<li>AMP_BR</li>
 			<li>AMP_LMG</li>
 		</weaponTags>
-		<weaponMoney>600~1700</weaponMoney>
+		<weaponMoney>800~1700</weaponMoney>
 		<apparelRequired>
 			<li>AMP_BattleDress</li>
 			<li>AMP_HeavyArmor</li>
 			<li>AMP_HeavyHelmet</li>
 			<li>AMP_LargeBackpack</li>
 		</apparelRequired>
-		<apparelTags/>
-		<apparelMoney>1200~1800</apparelMoney>
+		<apparelTags>
+			<li>AMP_HeavyArmor</li>
+		</apparelTags>
+		<apparelMoney>1300~1900</apparelMoney>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="AMP_HeavyInfantryBase">
@@ -36,8 +38,8 @@
 						<li>CE_Sidearm</li>
 					</weaponTags>
 					<magazineCount>
-						<min>2</min>
-						<max>5</max>
+						<min>1</min>
+						<max>1</max>
 					</magazineCount>
 				</forcedSidearm>
 			</li>
@@ -63,8 +65,8 @@
 						<li>CE_Sidearm</li>
 					</weaponTags>
 					<magazineCount>
-						<min>2</min>
-						<max>5</max>
+						<min>1</min>
+						<max>1</max>
 					</magazineCount>
 				</forcedSidearm>
 			</li>

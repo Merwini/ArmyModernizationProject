@@ -112,6 +112,7 @@
 		<forceGenerateRoof>true</forceGenerateRoof>
 		<needRoofClearance>true</needRoofClearance>
 		<tags>
+			<li>AMP_PGM_Incendiary</li>
 			<li>AMP_Site_Ammo</li>
 			<li>AMP_Site_Minor</li>
 		</tags>

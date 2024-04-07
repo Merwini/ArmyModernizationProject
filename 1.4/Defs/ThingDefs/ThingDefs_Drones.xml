@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseMechanoid" Name="AMP_BaseDrone" Abstract="True">
+		<PsychicSensitivity>0</PsychicSensitivity>
+		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+		<ComfyTemperatureMax>100</ComfyTemperatureMax>
+		<MeatAmount>0</MeatAmount>
+	</ThingDef>
+	
+	<!--RC Car Race-->
+	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseRC" Abstract="True">
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<MoveSpeed>6.9</MoveSpeed>
+			<SmokeSensitivity>0</SmokeSensitivity>
+			<NightVisionEfficiency>0.80</NightVisionEfficiency>
+			<ArmorRating_Sharp>1</ArmorRating_Sharp>
+			<ArmorRating_Sharp>3</ArmorRating_Sharp>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="AMP_BaseRC">
+		<defName>AMP_ExplosiveRC</defName>
+		<label>explosive RC drone</label>
+	</ThingDef>
+
+	<ThingDef ParentName="AMP_BaseRC">
+		<defName>AMP_IncendiaryRC</defName>
+		<label>incendiary RC drone</label>
+	</ThingDef>
+	
+	<!--Gun Dog Race-->
+	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseDog" Abstract="True">
+		
+	</ThingDef>
+
+	<ThingDef ParentName="AMP_BaseDog">
+		<defName>AMP_LMGDog</defName>
+		<label>gun dog</label>
+	</ThingDef>
+	
+	<ThingDef ParentName="AMP_BaseDog">
+		<defName>AMP_IncDog</defName>
+		<label>incendiary gun dog</label>
+	</ThingDef>
+
+	<!--Tank Drone Race-->
+	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseTank" Abstract="True">
+
+	</ThingDef>
+
+	<ThingDef ParentName="AMP_BaseTank">
+		<defName>AMP_MGTank</defName>
+		<label>tank drone</label>
+	</ThingDef>
+	
+</Defs>

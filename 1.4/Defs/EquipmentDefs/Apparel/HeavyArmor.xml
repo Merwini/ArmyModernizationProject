@@ -24,8 +24,8 @@
 			<MaxHitPoints>275</MaxHitPoints>
 			<ArmorRating_Sharp>18</ArmorRating_Sharp>
 			<ArmorRating_Blunt>28</ArmorRating_Blunt>
-      <ArmorRating_Heat>0.60</ArmorRating_Heat>
-			<Mass>20</Mass>
+			<ArmorRating_Heat>0.60</ArmorRating_Heat>
+			<Mass>16</Mass>
 			<Bulk>20</Bulk>
 			<WornBulk>8</WornBulk>
 			<EquipDelay>5</EquipDelay>

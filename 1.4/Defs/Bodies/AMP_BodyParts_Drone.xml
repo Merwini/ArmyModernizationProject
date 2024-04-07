@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	
+	<!--Shared Drone Parts-->
+
+	<BodyPartDef>
+		<defName>AMP_DroneDatalink</defName>
+		<label>datalink</label>
+		<hitPoints>10</hitPoints>
+		<skinCovered>false</skinCovered>
+		<solid>true</solid>
+		<alive>false</alive>
+		<bleedRate>0</bleedRate>
+		<tags>
+			<li>ConsciousnessSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<!--RC Parts-->
+
+	<!--Dog Parts-->
+
+	<!--Tank Parts-->
+	
+</Defs>

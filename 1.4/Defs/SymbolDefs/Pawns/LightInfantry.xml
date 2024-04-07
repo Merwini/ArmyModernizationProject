@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<KCSG.SymbolDef>
+		<defName>AMP_LightInfantry_FMJ_1_Mobile</defName>
+		<pawnKindDef>AMP_LightInfantry_FMJ</pawnKindDef>
+		<numberToSpawn>1</numberToSpawn>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>AMP_LightInfantry_FMJ_1_Static</defName>
+		<pawnKindDef>AMP_LightInfantry_FMJ</pawnKindDef>
+		<numberToSpawn>1</numberToSpawn>
+		<defendSpawnPoint>true</defendSpawnPoint>
+	</KCSG.SymbolDef>
+	
+	<KCSG.SymbolDef>
 		<defName>AMP_LightInfantry_API_1_Mobile</defName>
 		<pawnKindDef>AMP_LightInfantry_API</pawnKindDef>
 		<numberToSpawn>1</numberToSpawn>
