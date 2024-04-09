@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<KCSG.StructureLayoutDef>
-		<defName>AMP_Ammo_TierOne</defName>
+		<defName>AMP_API_TierOne</defName>
 		<spawnConduits>false</spawnConduits>
 		<layouts>
 			<li>

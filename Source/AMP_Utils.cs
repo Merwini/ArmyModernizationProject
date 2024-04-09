@@ -40,7 +40,7 @@ namespace nuff.ArmyModernizationProject
                     continue;
                 if (site.MainSitePartDef == null)
                     continue;
-                if (site.MainSitePartDef.tags.Any(t => t.StartsWith("AMP_")))
+                if (site.MainSitePartDef.defName.StartsWith("AMP_"))
                 {
                     ampSites.Add(site);
                     continue;
@@ -64,8 +64,9 @@ namespace nuff.ArmyModernizationProject
 
             foreach (SitePartDef def in DefDatabase<SitePartDef>.AllDefs)
             {
-                if (def.tags.Any(tag => tag.StartsWith("AMP_")))
+                if (def.defName.StartsWith("AMP_"))
                 {
+                    Log.Message("Found AMP SPD " + def.defName);
                     eligibleDefs.Add(def);
                 }
             }
