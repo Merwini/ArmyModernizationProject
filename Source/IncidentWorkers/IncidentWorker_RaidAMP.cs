@@ -175,19 +175,19 @@ namespace nuff.ArmyModernizationProject
             AMP_FactionDef factionDef = (AMP_FactionDef)parms.faction.def;
             foreach (AMP_PawnGroupMaker pgm in factionDef.pawnGroupMakers)
             {
-                if (Prefs.DevMode)
-                {
-                    if (pgm.debugName != null)
-                    {
-                        Log.Message($"Adding {pgm.debugName} as pgm option");
-                    }
-                    else
-                    {
-                        Log.Message($"Adding unnamed pgm as pgm option");
-                    }
-                }
                 if (AMP_Utils.CheckIfAllTagsPresent(pgm.requiredSiteTags, ampTags))
                 {
+                    if (Prefs.DevMode)
+                    {
+                        if (pgm.debugName != null)
+                        {
+                            Log.Message($"Adding {pgm.debugName} as pgm option");
+                        }
+                        else
+                        {
+                            Log.Message($"Adding unnamed pgm as pgm option");
+                        }
+                    }
                     possibleGroupMakers.Add(pgm);
                 }
             }
