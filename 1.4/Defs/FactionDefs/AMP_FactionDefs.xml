@@ -80,7 +80,7 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<debugName>LightFMJ</debugName>
-				<commonality>10</commonality>
+				<commonality>2</commonality>
 				<allowedRaidStrategies>
 					<li>ImmediateAttackSmart</li>
 				</allowedRaidStrategies>
@@ -95,7 +95,7 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<debugName>LightLightHeavyFMJ</debugName>
-				<commonality>10</commonality>
+				<commonality>1</commonality>
 				<allowedRaidStrategies>
 					<li>ImmediateAttackSmart</li>
 				</allowedRaidStrategies>
