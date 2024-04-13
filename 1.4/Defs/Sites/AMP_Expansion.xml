@@ -36,14 +36,16 @@
 		<tags>
 			<li>AMP_PGM_Incendiary</li>
 		</tags>
-		<modExtensions>
-			<li Class="KCSG.CustomGenOption">
-				<chooseFromlayouts>
-					<li>AMP_API_TierOne</li>
-				</chooseFromlayouts>
-				<preventBridgeable>true</preventBridgeable>
-				<tryFindFreeArea>True</tryFindFreeArea>
-			</li>
-		</modExtensions>
 	</SitePartDef>
+	<GenStepDef>
+		<defName>AMP_Site_API_TierOne</defName>
+		<linkWithSite>AMP_Site_API_TierOne</linkWithSite>
+		<order>450</order>
+		<genStep Class="KCSG.GenStep_CustomStructureGen">
+			<structureLayoutDefs>
+				<li>AMP_API_TierOne</li>
+			</structureLayoutDefs>
+			<preventBridgeable>true</preventBridgeable>
+		</genStep>
+	</GenStepDef>
 </Defs>
