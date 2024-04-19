@@ -27,7 +27,6 @@ namespace nuff.ArmyModernizationProject
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            Log.Message("Exp TryExecuteWorker");
             if (!TryResolveExpansionFaction(parms))
                 return false;
 
@@ -50,7 +49,6 @@ namespace nuff.ArmyModernizationProject
 
         internal bool TryResolveExpansionFaction(IncidentParms parms)
         {
-            Log.Message("Exp TryResolveExpansionFaction");
             //Early return for debug tool forcing a chosen faction
             if (parms.faction != null && parms.faction.def is AMP_FactionDef)
             {
@@ -72,23 +70,18 @@ namespace nuff.ArmyModernizationProject
 
         internal virtual bool TryResolveExpansionDef(IncidentParms parms)
         {
-            Log.Message("Exp TryResolveExpansionDef");
             eligibleAMPSites = AMP_Utils.FindEligibleAMPSiteDefsFor(parms.faction);
-            Log.Message("1");
             if (eligibleAMPSites.NullOrEmpty())
                 return false;
 
-            Log.Message("2");
             //TODO custom expansion patterns for different storytellers? e.x. has to spawn X minor expansions before doing a major one, random, spawn in a set pattern
             ampDef = eligibleAMPSites.RandomElementByWeight(s => s.selectionWeight);
 
-            Log.Message("3");
             return ampDef != null;
         }
 
         internal bool TrySelectTile()
         {
-            Log.Message("Exp TrySelectTile");
             TileFinder.TryFindNewSiteTile(out tile, AMP_Settings.minimumExpansionDistance, AMP_Settings.maximumExpansionDistance, false, TileFinderMode.Near);
 
             return tile >= 0;
@@ -96,7 +89,6 @@ namespace nuff.ArmyModernizationProject
         
         internal bool TryMakeSite(IncidentParms parms)
         {
-            Log.Message("Exp TryMakeSite");
             site = SiteMaker.MakeSite(ampDef, tile, parms.faction);
             site.sitePartsKnown = true; //TODO site that hides information for sites
 
@@ -105,7 +97,6 @@ namespace nuff.ArmyModernizationProject
 
         internal bool TryPlaceSite()
         {
-            Log.Message("Exp TryPlaceSite");
             Find.WorldObjects.Add(site);
             return true;
         }

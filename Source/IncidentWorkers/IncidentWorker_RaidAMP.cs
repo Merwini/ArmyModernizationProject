@@ -20,7 +20,6 @@ namespace nuff.ArmyModernizationProject
 
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
-            Log.Warning("execute");
             if (!TryGenerateRaidInfo(parms, out var pawns))
             {
                 return false;
@@ -82,7 +81,6 @@ namespace nuff.ArmyModernizationProject
 
         public new bool TryGenerateRaidInfo(IncidentParms parms, out List<Pawn> pawns, bool debugTest = false)
         {
-            Log.Warning("generate");
             List<Site> ampSites;
             List<SitePartDef> ampSiteDefs;
 
@@ -179,9 +177,9 @@ namespace nuff.ArmyModernizationProject
                 {
                     if (Prefs.DevMode)
                     {
-                        if (pgm.debugName != null)
+                        if (pgm.groupName != null)
                         {
-                            Log.Message($"Adding {pgm.debugName} as pgm option");
+                            Log.Message($"Adding {pgm.groupName} as pgm option");
                         }
                         else
                         {
@@ -195,9 +193,9 @@ namespace nuff.ArmyModernizationProject
             possibleGroupMakers.TryRandomElementByWeight((AMP_PawnGroupMaker gm) => gm.commonality, out groupMaker);
             if (Prefs.DevMode)
             {
-                if (groupMaker.debugName != null)
+                if (groupMaker.groupName != null)
                 {
-                    Log.Message($"Selected {groupMaker.debugName} as pgm");
+                    Log.Message($"Selected {groupMaker.groupName} as pgm");
                 }
                 else
                 {
