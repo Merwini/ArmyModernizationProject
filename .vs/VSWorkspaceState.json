@@ -1,16 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\1.4",
-    "\\1.4\\Defs",
-    "\\1.4\\Defs\\EquipmentDefs",
-    "\\1.4\\Defs\\EquipmentDefs\\Weapons",
-    "\\1.4\\Defs\\SymbolDefs",
-    "\\1.4\\Defs\\SymbolDefs\\Buildings",
-    "\\1.4\\Defs\\SymbolDefs\\Pawns",
-    "\\1.4\\Defs\\SymbolDefs\\Things",
-    "\\Source"
+    "\\1.5",
+    "\\1.5\\Defs",
+    "\\1.5\\Defs\\StructureLayoutDefs",
+    "\\1.5\\Defs\\StructureLayoutDefs\\Ammo",
+    "\\About",
+    "\\Languages",
+    "\\Languages\\English",
+    "\\Languages\\English\\Keyed",
+    "\\Source",
+    "\\Source\\IncidentWorkers"
   ],
-  "SelectedNode": "\\Source\\ArmyModernizationProject.sln",
+  "SelectedNode": "\\1.5\\Defs\\FactionDefs\\AMP_FactionDefs.xml",
   "PreviewInSolutionExplorer": false
 }

@@ -57,6 +57,7 @@
     <Compile Include="AMP_FactionDef.cs" />
     <Compile Include="AMP_PawnGroupMaker.cs" />
     <Compile Include="AMP_Settings.cs" />
+    <Compile Include="GenStep_TaggedPawnGroup.cs" />
     <Compile Include="SitePartWorkers\AMP_SitePartWorker_Expansion.cs" />
     <Compile Include="AMP_Utils.cs" />
     <Compile Include="DebugActions.cs" />
