@@ -3,15 +3,14 @@
     "",
     "\\1.5",
     "\\1.5\\Defs",
-    "\\1.5\\Defs\\StructureLayoutDefs",
-    "\\1.5\\Defs\\StructureLayoutDefs\\Ammo",
-    "\\About",
-    "\\Languages",
-    "\\Languages\\English",
-    "\\Languages\\English\\Keyed",
+    "\\1.5\\Defs\\PawnKindDefs_Humanlikes",
+    "\\1.5\\Defs\\PawnKindDefs_Mechanical",
+    "\\1.5\\Defs\\Sites",
+    "\\1.5\\Defs\\ThingDefs",
+    "\\1.5\\WIP",
     "\\Source",
-    "\\Source\\IncidentWorkers"
+    "\\Source\\SitePartWorkers"
   ],
-  "SelectedNode": "\\1.5\\Defs\\FactionDefs\\AMP_FactionDefs.xml",
+  "SelectedNode": "\\1.5\\WIP\\ThingDefs_Drones.xml",
   "PreviewInSolutionExplorer": false
 }
