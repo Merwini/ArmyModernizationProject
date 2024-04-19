@@ -79,7 +79,7 @@
 		<pawnGroupMakers>
 			<li>
 				<kindDef>Combat</kindDef>
-				<debugName>LightFMJ</debugName>
+				<groupName>LightFMJ</groupName>
 				<commonality>2</commonality>
 				<allowedRaidStrategies>
 					<li>ImmediateAttackSmart</li>
@@ -94,7 +94,7 @@
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
-				<debugName>LightLightHeavyFMJ</debugName>
+				<groupName>LightLightHeavyFMJ</groupName>
 				<commonality>1</commonality>
 				<allowedRaidStrategies>
 					<li>ImmediateAttackSmart</li>
@@ -110,7 +110,7 @@
 			</li>
 			<li>
 				<kindDef>Combat</kindDef>
-				<debugName>LightLightHeavyAPI</debugName>
+				<groupName>LightLightHeavyAPI</groupName>
 				<commonality>10</commonality>
 				<requiredSiteTags>
 					<li>AMP_PGM_Incendiary</li>
