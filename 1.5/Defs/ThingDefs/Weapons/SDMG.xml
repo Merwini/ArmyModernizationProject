@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>AMP_SDMG</defName>
+		<label>.338 SDMG</label>
+		<description>A late-industrial drone-mounted machinegun chambered in .338 Norma Magnum.</description>
+		<graphicData>
+			<texPath>Modernization/Drones/UGBader_MLRS/UGBadger_turret_SDMG</texPath>
+		</graphicData>
+	</ThingDef>
+</Defs>

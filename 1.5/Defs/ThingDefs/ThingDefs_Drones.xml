@@ -1,10 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<ThingDef ParentName="BaseMechanoid" Name="AMP_BaseDrone" Abstract="True">
-		<PsychicSensitivity>0</PsychicSensitivity>
-		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
-		<ComfyTemperatureMax>100</ComfyTemperatureMax>
+
 		<MeatAmount>0</MeatAmount>
+		<statBases>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>120</ComfyTemperatureMax>
+			<SmokeSensitivity>0</SmokeSensitivity>
+			<NightVisionEfficiency>0.80</NightVisionEfficiency>
+		</statBases>
 	</ThingDef>
 	
 	<!--RC Car Race-->
@@ -12,10 +17,8 @@
 		<statBases>
 			<MarketValue>300</MarketValue>
 			<MoveSpeed>6.9</MoveSpeed>
-			<SmokeSensitivity>0</SmokeSensitivity>
-			<NightVisionEfficiency>0.80</NightVisionEfficiency>
 			<ArmorRating_Sharp>1</ArmorRating_Sharp>
-			<ArmorRating_Sharp>3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
 		</statBases>
 	</ThingDef>
@@ -32,7 +35,13 @@
 	
 	<!--Gun Dog Race-->
 	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseDog" Abstract="True">
-		
+		<statBases>
+			<MarketValue>900</MarketValue>
+			<MoveSpeed>4.6</MoveSpeed>
+			<ArmorRating_Sharp>3</ArmorRating_Sharp>
+			<ArmorRating_Blunt>5</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+		</statBases>
 	</ThingDef>
 
 	<ThingDef ParentName="AMP_BaseDog">
@@ -47,7 +56,13 @@
 
 	<!--Tank Drone Race-->
 	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseTank" Abstract="True">
-
+		<statBases>
+			<MarketValue>2700</MarketValue>
+			<MoveSpeed>2.3</MoveSpeed>
+			<ArmorRating_Sharp>16</ArmorRating_Sharp>
+			<ArmorRating_Blunt>37</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+		</statBases>
 	</ThingDef>
 
 	<ThingDef ParentName="AMP_BaseTank">
