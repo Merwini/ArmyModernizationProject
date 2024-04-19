@@ -20,6 +20,6 @@ namespace nuff.ArmyModernizationProject
         //Want to be able to use vanilla RaidStrategies without being tied to their arrival modes
         public List<PawnsArrivalModeDef> allowedArrivalModes;
 
-        public string debugName;
+        public string groupName;
     }
 }
