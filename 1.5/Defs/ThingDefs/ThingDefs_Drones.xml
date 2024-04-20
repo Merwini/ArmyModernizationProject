@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="BaseMechanoid" Name="AMP_BaseDrone" Abstract="True">
+	<LifeStageDef>
+		<defName>AMPDroneCompleted</defName>
+		<label>complete</label>
+		<visible>false</visible>
+	</LifeStageDef>
 
-		<MeatAmount>0</MeatAmount>
+	<ThingDef ParentName="BaseMechanoid" Name="AMP_BaseDrone" Abstract="True">
 		<statBases>
 			<PsychicSensitivity>0</PsychicSensitivity>
 			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
@@ -10,30 +14,178 @@
 			<SmokeSensitivity>0</SmokeSensitivity>
 			<NightVisionEfficiency>0.80</NightVisionEfficiency>
 		</statBases>
+		<race>
+			
+		</race>
 	</ThingDef>
 	
 	<!--RC Car Race-->
-	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseRC" Abstract="True">
+	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_RC_Base" Abstract="True">
+		<description>Wheeled combat drones, designed to be cheap and disposable. Their light armor gives them a low durability but high speed. It is recommended to try to destroy them at range, as they are still exceedingly deadly up close.</description>
 		<statBases>
 			<MarketValue>300</MarketValue>
 			<MoveSpeed>6.9</MoveSpeed>
 			<ArmorRating_Sharp>1</ArmorRating_Sharp>
 			<ArmorRating_Blunt>3</ArmorRating_Blunt>
 			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<CarryWeight>100</CarryWeight>
+			<CarryBulk>50</CarryBulk>
 		</statBases>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>ram</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2.6</cooldownTime>
+				<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup> <!--TODO correct after creating bodyparts-->
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<body>MechanicalCentipede</body>  <!--TODO correct after creating bodyparts-->
+			<baseBodySize>0.2</baseBodySize>
+			<baseHealthScale>0.4</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>AMPDroneCompleted</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+					<soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>20</Steel>
+		</butcherProducts>
 	</ThingDef>
 
-	<ThingDef ParentName="AMP_BaseRC">
-		<defName>AMP_ExplosiveRC</defName>
-		<label>explosive RC drone</label>
+	<PawnKindDef  ParentName="BaseMechanoidKind" Name="AMP_RC_BaseKind" Abstract="True">
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Modernization/Drones/UGFerret/UGFerret</texPath>
+					<drawSize>1</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<combatPower>50</combatPower>
+	</PawnKindDef>
+
+	<ThingDef ParentName="AMP_RC_Base">
+		<defName>AMP_RC_SMG</defName>
+		<label>rc drone</label>
 	</ThingDef>
 
-	<ThingDef ParentName="AMP_BaseRC">
-		<defName>AMP_IncendiaryRC</defName>
-		<label>incendiary RC drone</label>
-	</ThingDef>
+	<PawnKindDef ParentName="AMP_RC_BaseKind">
+		<defName>AMP_RC_SMG</defName>
+		<label>rc drone</label>
+		<race>AMP_RC_SMG</race>
+		<weaponTags>
+			<li>AMP_FerretSMG</li>
+		</weaponTags>
+		<weaponMoney>9999~9999</weaponMoney>
+		<modExtensions>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>1</min>
+					<max>1</max>
+				</primaryMagazineCount>
+				<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
 	
-	<!--Gun Dog Race-->
+	<ThingDef ParentName="AMP_RC_Base">
+		<defName>AMP_RC_Explosive</defName>
+		<label>explosive RC drone</label>
+		<tools Inherit="False">
+			<li Class="CombatExtended.ToolCE">
+				<label>self-destruct</label>
+				<capacities>
+					<li>AMP_SelfDestruct</li>
+				</capacities>
+				<power>1</power>
+				<extraMeleeDamages>
+					<li>
+						<def>AMP_RC_BombSelfDestruct</def>
+						<amount>1</amount>
+						<chance>1</chance>
+					</li>
+				</extraMeleeDamages>
+				<cooldownTime>2.6</cooldownTime>
+				<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+				<!--TODO correct after creating bodyparts-->
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>1</chanceFactor>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AMP_RC_BaseKind">
+		<defName>AMP_RC_Explosive</defName>
+		<label>explosive rc drone</label>
+		<race>AMP_RC_Explosive</race>
+		<lifeStages Inherit="False">
+			<li>
+				<bodyGraphicData>
+					<texPath>Modernization/Drones/UGFerret/UGFerretBomb</texPath>
+					<drawSize>1</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<ThingDef ParentName="AMP_RC_Base">
+		<defName>AMP_RC_Incendiary</defName>
+		<label>incendiary RC drone</label>
+		<tools Inherit="False">
+			<li Class="CombatExtended.ToolCE">
+				<label>self-destruct</label>
+				<capacities>
+					<li>AMP_SelfDestruct</li>
+				</capacities>
+				<power>1</power>
+				<extraMeleeDamages>
+					<li>
+						<def>AMP_RC_IncendiarySelfDestruct</def>
+						<amount>1</amount>
+						<chance>1</chance>
+					</li>
+				</extraMeleeDamages>
+				<cooldownTime>2.6</cooldownTime>
+				<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+				<!--TODO correct after creating bodyparts-->
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>1</chanceFactor>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AMP_RC_BaseKind">
+		<defName>AMP_RC_Incendiary</defName>
+		<label>incendiary rc drone</label>
+		<race>AMP_RC_Incendiary</race>
+		<lifeStages Inherit="False">
+			<li>
+				<bodyGraphicData>
+					<texPath>Modernization/Drones/UGFerret/UGFerretBomb</texPath>
+					<drawSize>1</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+	
+	<!--Gun Dog Race--><!--
 	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseDog" Abstract="True">
 		<statBases>
 			<MarketValue>900</MarketValue>
@@ -54,7 +206,9 @@
 		<label>incendiary gun dog</label>
 	</ThingDef>
 
-	<!--Tank Drone Race-->
+	
+	
+	--><!--Tank Drone Race--><!--
 	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseTank" Abstract="True">
 		<statBases>
 			<MarketValue>2700</MarketValue>
@@ -68,6 +222,6 @@
 	<ThingDef ParentName="AMP_BaseTank">
 		<defName>AMP_MGTank</defName>
 		<label>tank drone</label>
-	</ThingDef>
+	</ThingDef>-->
 	
 </Defs>

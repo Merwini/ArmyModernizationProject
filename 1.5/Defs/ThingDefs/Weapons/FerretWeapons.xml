@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<ThingDef ParentName="BaseGun">
-		<defName>AMP_SDMG</defName>
-		<label>.338 SDMG</label>
-		<description>A late-industrial drone-mounted machinegun chambered in .338 Norma Magnum.</description>
+		<defName>AMP_FSMG</defName>
+		<label>mounted SMG</label>
+		<description>A drone-mounted submachine gun chambered for 5.7x28mm pistol cartridges.</description>
 		<graphicData>
-			<texPath>Modernization/Weapons/UGBadgerTurretSDMG</texPath>
+			<texPath>Modernization/Weapons/UGFerretTurretSMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Industrial</techLevel>
 		<tradeability>None</tradeability>
 		<destroyOnDrop>true</destroyOnDrop>
+		<soundInteract>Interact_SMG</soundInteract>
 		<weaponClasses>
 			<li>RangedHeavy</li>
 		</weaponClasses>
 		<statBases>
-			<MarketValue>1400</MarketValue>
-			<Mass>35</Mass>
-			<Bulk>13</Bulk>
-			<SightsEfficiency>1</SightsEfficiency>
-			<ShotSpread>0.04</ShotSpread>
-			<SwayFactor>0.96</SwayFactor>
-			<RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+			<MarketValue>700</MarketValue>
+			<Mass>15</Mass>
+			<Bulk>5.75</Bulk>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>0.55</SwayFactor>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
 		</statBases>
 		<verbs>
 			<li Class="CombatExtended.VerbPropertiesCE">
-				<recoilAmount>1.24</recoilAmount>
+				<recoilAmount>0.95</recoilAmount>
 				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_338Lapua_FMJ</defaultProjectile>
-				<warmupTime>1.3</warmupTime>
-				<range>75</range>
+				<defaultProjectile>Bullet_FN57x28mm_FMJ</defaultProjectile>
+				<warmupTime>0.9</warmupTime>
+				<range>31</range>
 				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-				<burstShotCount>10</burstShotCount>
-				<soundCast>Shot_Minigun</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>12</muzzleFlashScale>
+				<burstShotCount>6</burstShotCount>
+				<soundCast>Shot_MachinePistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
@@ -44,17 +44,18 @@
 		</verbs>
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
-				<magazineSize>200</magazineSize>
-				<reloadTime>7.8</reloadTime>
-				<ammoSet>AmmoSet_338Norma</ammoSet>
+				<magazineSize>50</magazineSize>
+				<reloadTime>4.5</reloadTime>
+				<ammoSet>AmmoSet_FN57x28mm</ammoSet>
 			</li>
 			<li Class="CombatExtended.CompProperties_FireModes">
-				<aimedBurstShotCount>5</aimedBurstShotCount>
+				<aimedBurstShotCount>3</aimedBurstShotCount>
 				<aiAimMode>SuppressFire</aiAimMode>
 				<aiUseBurstMode>False</aiUseBurstMode>
 			</li>
 		</comps>
 		<weaponTags>
+			<li>AMP_FerretSMG</li>
 			<li>CE_AI_Suppressive</li>
 			<li>CE_MachineGun</li>
 			<li>NoSwitch</li>
@@ -65,7 +66,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>10</power>
+				<power>5</power>
 				<cooldownTime>2.44</cooldownTime>
 				<armorPenetrationBlunt>3.5</armorPenetrationBlunt>
 				<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
