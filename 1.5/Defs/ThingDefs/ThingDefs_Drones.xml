@@ -6,7 +6,7 @@
 		<visible>false</visible>
 	</LifeStageDef>
 
-	<ThingDef ParentName="BaseMechanoid" Name="AMP_BaseDrone" Abstract="True">
+	<ThingDef ParentName="BaseMechanoid" Name="AMP_DroneBase" Abstract="True">
 		<statBases>
 			<PsychicSensitivity>0</PsychicSensitivity>
 			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
@@ -20,7 +20,7 @@
 	</ThingDef>
 	
 	<!--RC Car Race-->
-	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_RC_Base" Abstract="True">
+	<ThingDef ParentName="AMP_DroneBase" Name="AMP_RC_Base" Abstract="True">
 		<description>Wheeled combat drones, designed to be cheap and disposable. Their light armor gives them a low durability but high speed. It is recommended to try to destroy them at range, as they are still exceedingly deadly up close.</description>
 		<statBases>
 			<MarketValue>300</MarketValue>
@@ -40,13 +40,15 @@
 				<power>5</power>
 				<cooldownTime>2.6</cooldownTime>
 				<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup> <!--TODO correct after creating bodyparts-->
+				<!--TODO correct after creating bodyparts-->
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
 		</tools>
 		<race>
 			<intelligence>ToolUser</intelligence>
 			<thinkTreeMain>Mechanoid</thinkTreeMain>
-			<body>MechanicalCentipede</body>  <!--TODO correct after creating bodyparts-->
+			<!--TODO correct after creating bodyparts-->
+			<body>MechanicalCentipede</body>
 			<baseBodySize>0.2</baseBodySize>
 			<baseHealthScale>0.4</baseHealthScale>
 			<lifeStageAges>
@@ -81,12 +83,12 @@
 
 	<ThingDef ParentName="AMP_RC_Base">
 		<defName>AMP_RC_SMG</defName>
-		<label>rc drone</label>
+		<label>RC drone</label>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AMP_RC_BaseKind">
 		<defName>AMP_RC_SMG</defName>
-		<label>rc drone</label>
+		<label>RC drone</label>
 		<race>AMP_RC_SMG</race>
 		<weaponTags>
 			<li>AMP_FerretSMG</li>
@@ -132,7 +134,7 @@
 
 	<PawnKindDef ParentName="AMP_RC_BaseKind">
 		<defName>AMP_RC_Explosive</defName>
-		<label>explosive rc drone</label>
+		<label>explosive RC drone</label>
 		<race>AMP_RC_Explosive</race>
 		<lifeStages Inherit="False">
 			<li>
@@ -173,7 +175,7 @@
 
 	<PawnKindDef ParentName="AMP_RC_BaseKind">
 		<defName>AMP_RC_Incendiary</defName>
-		<label>incendiary rc drone</label>
+		<label>incendiary RC drone</label>
 		<race>AMP_RC_Incendiary</race>
 		<lifeStages Inherit="False">
 			<li>
@@ -185,31 +187,108 @@
 		</lifeStages>
 	</PawnKindDef>
 	
-	<!--Gun Dog Race--><!--
-	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseDog" Abstract="True">
+	<!--Gun Dog Race-->
+	<ThingDef ParentName="AMP_DroneBase" Name="AMP_DogBase" Abstract="True">
 		<statBases>
 			<MarketValue>900</MarketValue>
 			<MoveSpeed>4.6</MoveSpeed>
 			<ArmorRating_Sharp>3</ArmorRating_Sharp>
 			<ArmorRating_Blunt>5</ArmorRating_Blunt>
 			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<!--These are so high because the body size multiplier is so small-->
+			<CarryWeight>100</CarryWeight>
+			<CarryBulk>50</CarryBulk>
 		</statBases>
+		<tools>
+			<li>
+				<label>left leg</label>
+				<labelNoLocation>leg</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right lef</label>
+				<labelNoLocation>leg</labelNoLocation>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Mechanoid</thinkTreeMain>
+			<!--TODO correct after creating bodyparts-->
+			<body>QuadrupedAnimalWithHooves</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>AMPDroneCompleted</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+					<soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>30</Steel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+		</butcherProducts>
 	</ThingDef>
 
-	<ThingDef ParentName="AMP_BaseDog">
-		<defName>AMP_LMGDog</defName>
+	<ThingDef ParentName="AMP_DogBase">
+		<defName>AMP_DogLMG</defName>
 		<label>gun dog</label>
 	</ThingDef>
-	
-	<ThingDef ParentName="AMP_BaseDog">
-		<defName>AMP_IncDog</defName>
-		<label>incendiary gun dog</label>
-	</ThingDef>
 
+	<PawnKindDef  ParentName="BaseMechanoidKind" Name="AMP_DogBaseKind" Abstract="True">
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<!--TODO change this once correct texture is available-->
+					<texPath>Modernization/Drones/UGFerret/UGFerret</texPath>
+					<drawSize>3</drawSize>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<combatPower>180</combatPower>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="AMP_DogBaseKind">
+		<defName>AMP_DogLMG</defName>
+		<label>gun dog</label>
+		<race>AMP_DogLMG</race>
+		<weaponTags>
+			<li>AMP_LMG</li>
+		</weaponTags>
+		<weaponMoney>9999~9999</weaponMoney>
+		<forceNormalGearQuality>True</forceNormalGearQuality>
+		<modExtensions>
+			<li Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>2</min>
+					<max>2</max>
+				</primaryMagazineCount>
+				<forcedAmmoCategory>FullMetalJacket</forcedAmmoCategory>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
 	
-	
-	--><!--Tank Drone Race--><!--
-	<ThingDef ParentName="AMP_BaseDrone" Name="AMP_BaseTank" Abstract="True">
+	<!--Tank Drone Race--><!--
+	<ThingDef ParentName="AMP_DroneBase" Name="AMP_BaseTank" Abstract="True">
 		<statBases>
 			<MarketValue>2700</MarketValue>
 			<MoveSpeed>2.3</MoveSpeed>
